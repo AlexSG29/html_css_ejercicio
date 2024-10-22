@@ -1,119 +1,151 @@
 /* General reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-  }
-  
-  .agrupador {
-    width: 960px;
-    margin: 0 auto;
-  }
-  
-  /* Header */
-  #header {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-  }
-  
-  #hgroup {
-    align-self: flex-start;
-  }
-  
-  #hgroup h1, #hgroup h2 {
-    margin: 0;
-  }
-  
-  #hgroup h1 {
-    font-size: 24px;
-  }
-  
-  #hgroup h2 {
-    font-size: 14px;
-    font-weight: normal;
-  }
-  
-  nav {
-    align-self: flex-end;
-    margin-top: 10px;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li.last {
-    margin-right: 0;
-  }
-  
-  /* Main container */
-  #container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #slider {
-    margin-bottom: 20px;
-  }
-  
-  #shout {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  #shout h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  
-  
-  /* Footer */
-  #footer {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-    margin-top: 20px;
-  }
-  
-  .fl_left {
-    text-align: left;
-  }
-  
-  .fl_right {
-    text-align: right;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .main-container {
-    display: flex; /* Utiliza Flexbox para el diseño */
+body {
+  font-family: 'Times New Roman', Times, serif;
+  line-height: 1.6;
+  margin: 1.25rem; /* 20px */
+}
+
+/* Agrupadores */
+.agrupador {
+  width: 60rem; /* 960px */
+  margin: 0 auto;
+}
+
+/* Header */
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.25rem; /* 20px */
+  padding-bottom: 1.25rem; /* 20px */
+}
+
+#hgroup {
+  align-self: flex-start;
+}
+
+#hgroup h1, #hgroup h2 {
+  margin: 0;
+}
+
+#hgroup h1 {
+  font-size: 2.125rem; 
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+#hgroup h2 {
+  font-size: 0.75rem; /* 12px */
+  font-weight: normal;
+}
+
+nav {
+  align-self: flex-end;
+  margin-top: 0.625rem; /* 10px */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-right: 1.25rem; 
+  font-size: 0.75rem;
+  a {
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+nav ul li.last {
+  margin-right: 0;
+}
+
+/* Main container */
+#container {
+  display: flex;
+  flex-direction: column;
+}
+
+#slider {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+#shout {
+  text-align: center;
+  margin-bottom: 1.25rem; 
+  border-top: 1px solid #ccc;
+
+  h1 {
+    margin-top: 1.25rem;
+    font-size: 2.2rem; /* 24px */
+    margin-bottom: 0.625rem; /* 10px */
+    font-style: italic;
+    text-transform: uppercase;
+  }
+}
+
+article h2{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+/* Main content area */
+.main-container {
+  display: flex; /* Utiliza Flexbox para el diseño */
 }
 
 #content {
-    flex: 3; /* La columna de contenido ocupa 3 partes */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  flex: 3; /* La columna de contenido ocupa 3 partes */
+  padding: 1.25rem; /* 20px */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 
 #right_column {
-    flex: 1; /* La columna de la derecha ocupa 1 parte */
-    padding: 20px; /* Espaciado interno */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
-    background-color: #f2f2f2; /* Color de fondo opcional */
+  flex: 1; /* La columna de la derecha ocupa 1 parte */
+  padding: 1.25rem; /* 20px */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  background-color: #f2f2f2; /* Color de fondo opcional */
+}
+
+/* Footer */
+#footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  padding-top: 1.25rem; /* 20px */
+  margin-top: 1.25rem; /* 20px */
+}
+
+.fl_left {
+  text-align: left;
+}
+
+.fl_right {
+  text-align: right;
+}
+
+.more {
+  text-align: right;
+  a {
+    color: orangered;
+    text-decoration: none;
+  }
+}
+
+.one_third img {
+  float: left; /* Permite que el texto envuelva la imagen */
+  margin-right: 1rem; /* Espacio a la derecha de la imagen */
+  margin-bottom: 1rem; /* Espacio debajo de la imagen */
 }
