@@ -143,22 +143,6 @@ article h2{
 }s
 
 /* Footer */
-#footer {
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid #ccc;
-  padding-top: 1.25rem; /* 20px */
-  margin-top: 1.25rem; /* 20px */
-}
-
-.fl_left {
-  text-align: left;
-}
-
-.fl_right {
-  text-align: right;
-}
-
 .more {
   text-align: right;
   a {
@@ -198,4 +182,13 @@ article h2{
   content: ""; /* Crea un pseudo-elemento */
   grid-column: 2; /* Ocupa la segunda columna */
   grid-row: 1 / span 2; /* Ocupa ambas filas */
+}
+
+#contact {
+  margin-top: 2rem;
+}
+
+.last_contact {
+  font-size: 0.9rem;
+  margin: 0;
 }
