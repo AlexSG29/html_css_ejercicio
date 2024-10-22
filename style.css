@@ -1,4 +1,3 @@
-/* General reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,22 +7,37 @@
 body {
   font-family: 'Times New Roman', Times, serif;
   line-height: 1.6;
-  margin: 1.25rem; /* 20px */
+  margin: 1.25rem;
 }
 
-/* Agrupadores */
 .agrupador {
-  width: 60rem; /* 960px */
+  width: 60rem;
   margin: 0 auto;
 }
 
-/* Header */
+.more {
+  text-align: right;
+}
+.more a {
+  color: orangered;
+  text-decoration: none;
+}
+
+#footer {
+  margin-top: 1.25rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 #header {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 1.25rem; /* 20px */
-  padding-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
 }
 
 #hgroup {
@@ -35,21 +49,21 @@ body {
 }
 
 #hgroup h1 {
-  font-size: 2.125rem; 
-  a {
-    color: #000;
-    text-decoration: none;
-  }
+  font-size: 2.125rem;
+}
+#hgroup h1 a {
+  color: #000;
+  text-decoration: none;
 }
 
 #hgroup h2 {
-  font-size: 0.75rem; /* 12px */
+  font-size: 0.75rem;
   font-weight: normal;
 }
 
 nav {
   align-self: flex-end;
-  margin-top: 0.625rem; /* 10px */
+  margin-top: 0.625rem;
 }
 
 nav ul {
@@ -58,41 +72,39 @@ nav ul {
 }
 
 #header nav ul li {
-  margin-right: 1.25rem; 
+  margin-right: 1.25rem;
   font-size: 0.75rem;
-  a {
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
+}
+#header nav ul li a {
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 nav ul li.last {
   margin-right: 0;
 }
 
-/* Main container */
 #container {
   display: flex;
   flex-direction: column;
 }
 
 #slider {
-  margin-bottom: 1.25rem; /* 20px */
+  margin-bottom: 1.25rem;
 }
 
 #shout {
   text-align: center;
-  margin-bottom: 1.25rem; 
+  margin-bottom: 1.25rem;
   border-top: 1px solid #ccc;
-
-  h1 {
-    margin-top: 1.25rem;
-    font-size: 2.2rem; /* 24px */
-    margin-bottom: 0.625rem; /* 10px */
-    font-style: italic;
-    text-transform: uppercase;
-  }
+}
+#shout h1 {
+  margin-top: 1.25rem;
+  font-size: 2.2rem;
+  margin-bottom: 0.625rem;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 article h2{
@@ -101,20 +113,19 @@ article h2{
   text-transform: uppercase;
 }
 
-/* Main content area */
 .main-container {
-  display: flex; /* Utiliza Flexbox para el diseño */
+  display: flex;
 }
 
 #content {
-  flex: 3; /* La columna de contenido ocupa 3 partes */
-  padding: 1.25rem; /* 20px */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  flex: 3;
+  padding: 1.25rem;
+  box-sizing: border-box;
 }
 
 #right_column {
-  flex: 1; /* La columna de la derecha ocupa 1 parte */
-  padding: 1.25rem; /* 20px */
+  flex: 1;
+  padding: 1.25rem;
 }
 
 #right_column nav ul{
@@ -125,63 +136,53 @@ article h2{
 #right_column h2.title {
   text-transform: uppercase;
   font-size: 1.2rem;
-  border-bottom: 1px solid #ccc; /* Línea inferior de color #ccc */
-  padding-bottom: 10px; /* Espacio entre el texto y la línea */
-  margin-bottom: 10px; /* Espacio entre el título y los items */
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #right_column nav ul li {
   border-bottom: 1px solid #ccc;
-  margin-top: 0.125rem; 
+  margin-top: 0.125rem;
   margin-bottom: 0.125rem;
-  a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    margin-left: 1.2rem;
-  }
-}s
-
-/* Footer */
-.more {
-  text-align: right;
-  a {
-    color: orangered;
-    text-decoration: none;
-  }
+}
+#right_column nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 1.2rem;
 }
 
 .one_third img {
-  float: left; /* Permite que el texto envuelva la imagen */
-  margin-right: 1rem; /* Espacio a la derecha de la imagen */
-  margin-bottom: 1rem; /* Espacio debajo de la imagen */
+  float: left;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 
 #services {
   margin-top: 3rem;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas */
-  grid-template-rows: auto auto; /* Dos filas */
-  gap: 0.625rem; /* Espacio entre las celdas */
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.625rem;
 }
 
 #services article {
-  grid-column: 1; /* Coloca los artículos en la primera columna */
+  grid-column: 1;
 }
 
 #services article:nth-of-type(2) {
-  grid-row: 1; /* Coloca el segundo artículo en la primera fila */
+  grid-row: 1;
 }
 
 #services article:nth-of-type(1) {
-  grid-row: 3; /* Coloca el primer artículo en la segunda fila */
+  grid-row: 3;
 }
 
-/* Para dejar el lado derecho vacío */
 #services::after {
-  content: ""; /* Crea un pseudo-elemento */
-  grid-column: 2; /* Ocupa la segunda columna */
-  grid-row: 1 / span 2; /* Ocupa ambas filas */
+  content: "";
+  grid-column: 2;
+  grid-row: 1 / span 2;
 }
 
 #contact {
