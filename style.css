@@ -57,7 +57,7 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
+#header nav ul li {
   margin-right: 1.25rem; 
   font-size: 0.75rem;
   a {
@@ -115,9 +115,32 @@ article h2{
 #right_column {
   flex: 1; /* La columna de la derecha ocupa 1 parte */
   padding: 1.25rem; /* 20px */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  background-color: #f2f2f2; /* Color de fondo opcional */
 }
+
+#right_column nav ul{
+  display: flex;
+  flex-direction: column;
+}
+
+#right_column h2.title {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ccc; /* Línea inferior de color #ccc */
+  padding-bottom: 10px; /* Espacio entre el texto y la línea */
+  margin-bottom: 10px; /* Espacio entre el título y los items */
+}
+
+#right_column nav ul li {
+  border-bottom: 1px solid #ccc;
+  margin-top: 0.125rem; 
+  margin-bottom: 0.125rem;
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 1.2rem;
+  }
+}s
 
 /* Footer */
 #footer {
@@ -148,4 +171,31 @@ article h2{
   float: left; /* Permite que el texto envuelva la imagen */
   margin-right: 1rem; /* Espacio a la derecha de la imagen */
   margin-bottom: 1rem; /* Espacio debajo de la imagen */
+}
+
+#services {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas */
+  grid-template-rows: auto auto; /* Dos filas */
+  gap: 0.625rem; /* Espacio entre las celdas */
+}
+
+#services article {
+  grid-column: 1; /* Coloca los artículos en la primera columna */
+}
+
+#services article:nth-of-type(2) {
+  grid-row: 1; /* Coloca el segundo artículo en la primera fila */
+}
+
+#services article:nth-of-type(1) {
+  grid-row: 3; /* Coloca el primer artículo en la segunda fila */
+}
+
+/* Para dejar el lado derecho vacío */
+#services::after {
+  content: ""; /* Crea un pseudo-elemento */
+  grid-column: 2; /* Ocupa la segunda columna */
+  grid-row: 1 / span 2; /* Ocupa ambas filas */
 }
