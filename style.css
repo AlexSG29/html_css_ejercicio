@@ -81,29 +81,7 @@
     margin-bottom: 10px;
   }
   
-  /* Content area with two columns */
-  #content {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
   
-  /* Left column (Main content) */
-  #content section {
-    flex: 2;
-    padding-right: 20px;
-  }
-  
-  #content section:last-child {
-    padding-right: 0;
-  }
-  
-  /* Right column (Unidad 2 & Contact) */
-  #right_column {
-    width: 250px;
-    margin-left: 20px;
-    flex: 1;
-  }
   
   /* Footer */
   #footer {
@@ -122,3 +100,20 @@
     text-align: right;
   }
   
+
+  .main-container {
+    display: flex; /* Utiliza Flexbox para el diseño */
+}
+
+#content {
+    flex: 3; /* La columna de contenido ocupa 3 partes */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+}
+
+#right_column {
+    flex: 1; /* La columna de la derecha ocupa 1 parte */
+    padding: 20px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    background-color: #f2f2f2; /* Color de fondo opcional */
+}
